@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read JSON</title>
+  </head>
+
+  <body>
+    <h1>Read JSON Data</h1>
+    <!-- Example: Read users.json file using Fetch API -->
+    <script type="text/javascript">
+      fetch("users.json")
+        .then((response) => response.json())
+        .then((data) => {console.log("Users from users.json:", data);
+        //document.body.insertAdjacentHTML("beforeend", `<p>First user: ${data[0].UserLoginID} - ${data[0].UserName}</p>`);
+          data.forEach(user => {
+          // First, ensure there is a div to hold the results
+            let resultsDiv = document.getElementById("results");
+            if (resultsDiv) {
+            resultsDiv.style.border = "1px solid #ccc";
+            resultsDiv.style.padding = "4px";
+            resultsDiv.style.lineHeight = "1.1";
+            resultsDiv.style.fontSize = "13px";
+            resultsDiv.style.gap = "0";
+            resultsDiv.style.marginTop = "20px";
+            resultsDiv.style.backgroundColor = "#f9f9f9";
+            resultsDiv.style.borderRadius = "8px";
+            resultsDiv.style.lineHeight = "1";
+            resultsDiv.style.paddingTop = "2px";
+            resultsDiv.style.paddingBottom = "2px";
+            resultsDiv.style.margin = "0";
+            resultsDiv.style.maxWidth = "500px";
+            }
+          if (!resultsDiv) {
+            resultsDiv = document.createElement("div");
+            resultsDiv.id = "results";
+            document.body.appendChild(resultsDiv);
+          }
+          resultsDiv.insertAdjacentHTML("beforeend", `<p>User: ${user.UserLoginID} - ${user.UserName}</p>`);
+          });
+        })
+
+</script>
+  </body>
+</html>

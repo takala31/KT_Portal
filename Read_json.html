@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read JSON</title>
+  </head>
+
+  <body>
+    <h1>Read JSON Data</h1>
+    <!-- Example: Read users.json file using Fetch API -->
+    <script type="text/javascript">
+      fetch("users.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Users from users.json:", data);
+          // Example: display first user's name
+          if (data.length > 0) {
+			document.body.insertAdjacentHTML("beforeend", `<p>First user: ${data[20].UserLoginID} - ${data[20].UserName}</p>`);
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching users.json:", error);
+        });
+</script>
+  </body>
+</html>

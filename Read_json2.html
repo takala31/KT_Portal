@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read JSON</title>
+  </head>
+
+  <body>
+    <h1>Read JSON Data</h1>
+    <!-- Example: Read users.json file using Fetch API -->
+    <script type="text/javascript">
+      fetch("users.json")
+        .then((response) => response.json())
+        .then((data) => {console.log("Users from users.json:", data);
+        //document.body.insertAdjacentHTML("beforeend", `<p>First user: ${data[0].UserLoginID} - ${data[0].UserName}</p>`);
+          data.forEach(user => {
+          document.body.insertAdjacentHTML("beforeend", `<p>User: ${user.UserLoginID} - ${user.UserName}</p>`);
+          });
+        })
+
+</script>
+  </body>
+</html>
