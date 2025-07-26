@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing Fetch Data</title>
+    <link href="styles/mystyles.css" rel="stylesheet" />
+  </head>
+
+  <header>
+  <h1>Fetch Users</h1>
+  </header>
+
+
+  <body>
+    <!------------------------------------------  Fetching users from a JSON file (START)-->
+    <input type="button" id="FetchUsers" value="Fetch Users" onclick="fetchUsers()" />
+    <div id="usersList"></div>
+    <script>
+      function fetchUsers() {
+      fetch('users.json')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('usersList').innerHTML = data;
+        })
+        .catch(error => {
+        document.getElementById('usersList').innerHTML = 'Error fetching users.';
+        });
+      }
+    </script>
+    <!------------------------------------------ Fetching users from a JSON file (END)-->
+  
+
+    <br><br><br>
+    <input type="button" id="FetchData" value="Fetch Data" onclick="fetchData()" />
+    <div id="dataList"></div>
+
+    <script>
+      function fetchData() {
+        fetch("USERS.json")
+          .then((response) => {
+        // Place a breakpoint on the next line in your browser's DevTools
+        console.log(response.status); // 200
+        console.log(response.ok); // true
+        return response.text(); // extract the usable data
+          })
+          .then((data) => {
+        console.log(data); // the actual content from 'data.json'
+          })
+          .catch((error) => {
+        console.error("Error fetching data:", error);
+          });
+      }
+    </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('beforeend', data);
+    });
+</script>
+</body>
+
+</html>
