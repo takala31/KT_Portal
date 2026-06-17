@@ -451,7 +451,7 @@ footer p {
 }
 
 .image-grid img:hover {
-  transform: translateY(-5px);
+  transform: scale(2.2);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary-color);
 }

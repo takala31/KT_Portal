@@ -39,13 +39,15 @@
     <aside class="sidebar">
       <h3>Useful Links</h3>
       <ul>
-        <li><a href="https://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener">w3Schools SQL</a></li>
         <li><a href="https://github.com/takala31" target="_blank" rel="noopener">GitHub - takala31</a></li>
+        <li><a href="https://www.w3schools.com/sql/default.asp" target="_blank" rel="noopener">w3Schools SQL</a></li>
         <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.myaster.com/en/profile/myprofile" target="_blank" rel="noopener">My Aster</a></li>
         <li><a href="https://fakestoreapi.com/products" target="_blank" rel="noopener">FakestoreAPI</a></li>
         <li><a href="VSC_ShortCuts.png" target="_blank" rel="noopener">VSCode Shortcuts</a></li>
         <li><a href="https://github.com/dashboard" target="_blank" rel="noopener">GitHub Pages Settings</a></li>
         <li><a href="#Mouin_Idari" target="_blank" rel="noopener">Al Mouin Idari</a></li>
+
         
         <!-- ADD MORE LINKS HERE -->
       </ul>
@@ -87,8 +89,8 @@
       <!-- Images come from images/certificates/ folder -->
       <!-- To remove an image: delete its <img> line -->
       <div class="section">
-        <h2>Certificates</h2>
-        <div class="image-grid">
+        <h2 style="cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Certificates ▼' ? 'Certificates ▶' : 'Certificates ▼'">Certificates ▼</h2>
+        <div class="image-grid" style="display: none;">
           <img src="images/certificates/Image (2).jpg"  alt="Certificate" onclick="window.open(this.src)" title="Click to open full size" />
           <img src="images/certificates/Image (3).jpg"  alt="Certificate" onclick="window.open(this.src)" title="Click to open full size" />
           <img src="images/certificates/Image (4).jpg"  alt="Certificate" onclick="window.open(this.src)" title="Click to open full size" />
@@ -133,7 +135,7 @@
       <!-- Images come from images/Mouin_Idari/ folder + Image (61).jpg -->
       <div class="Al Mouin_Idari section" id="Mouin_Idari">
         <span style="font-weight: bold;"> Al Muin Al Idari - 1995 </span>  <span style=" font-size: small; color: gray;"> (30 years back)</span>
-        <section style="font-size: small; color: gray;">This was in 1995 in word basic language!! who ever heard about it ??</section>
+        <div style="font-size: small; color: gray;">This was in 1995 in word basic language!! who ever heard about it ??</div>
         <div class="image-grid">
           <img src="images\Mouin_Idari\Image (25).jpg" alt="Image" onclick="window.open(this.src)" title="Click to open full size" />
           <img src="images\Mouin_Idari\Image (53).jpg" alt="Image" onclick="window.open(this.src)" title="Click to open full size" />
@@ -141,7 +143,6 @@
           <img src="images\Mouin_Idari\Image (55).jpg" alt="Image" onclick="window.open(this.src)" title="Click to open full size" />
           <img src="images\Mouin_Idari\Image (56).jpg" alt="Image" onclick="window.open(this.src)" title="Click to open full size" />
           <img src="images\Mouin_Idari\Image (57).jpg" alt="Image" onclick="window.open(this.src)" title="Click to open full size" />
-          <img src="images\Mouin_Idari\Image (61).jpg" alt="Image" onclick="window.open(this.src)" title="Click to open full size" />
 
           <!-- Mouin_Idari images are in images/Mouin_Idari/ folder -->
           <!-- Add their filenames here if you want to show them -->
